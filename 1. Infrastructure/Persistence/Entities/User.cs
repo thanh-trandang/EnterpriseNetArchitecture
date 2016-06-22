@@ -9,6 +9,11 @@ namespace LogiGear.Infrastructure.Persistence.Entities
 {
     public class User
     {
+        public User()
+        {
+            this.ID = Guid.NewGuid().ToString();
+        }
+
         [Key]
         public String ID { get; private set; }
 
@@ -19,11 +24,13 @@ namespace LogiGear.Infrastructure.Persistence.Entities
         [Required]
         [MaxLength(50)]
         public String FirstName { get; set; }
+
         public String MiddleName { get; set; }
 
         [Required]
         [MaxLength(50)]
         public String LastName { get; set; }
+
         public bool IsActive { get; set; }
     }
 }

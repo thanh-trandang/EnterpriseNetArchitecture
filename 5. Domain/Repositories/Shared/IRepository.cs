@@ -9,9 +9,7 @@ namespace LogiGear.Domain.Repositories.Shared
 {
     public interface IRepository<TEntity> : IDisposable
     {
-        IUnitOfWork UnitOfWork { get; }
-
-        TEntity Add(TEntity entity);
+        TEntity Save(TEntity entity);
 
         TEntity Update(TEntity entity);
 

@@ -22,8 +22,19 @@ namespace LogiGear.Infrastructure.Persistence
             }
         }
 
-        public JobSeeker Add(JobSeeker entity)
+        public JobSeeker Save(JobSeeker jobSeeker)
         {
+            User user = new User();
+            user.Email = jobSeeker.Email;
+            user.FirstName = jobSeeker.FirstName;
+            user.MiddleName = jobSeeker.MiddleName;
+            user.LastName = jobSeeker.LastName;
+            return jobSeeker;
+        }
+
+        public JobSeeker FindOnlyOneJobSeeker(string email)
+        {
+
             throw new NotImplementedException();
         }
 
@@ -51,5 +62,7 @@ namespace LogiGear.Infrastructure.Persistence
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

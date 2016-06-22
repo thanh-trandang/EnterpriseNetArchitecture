@@ -11,19 +11,8 @@ namespace LogiGear.Infrastructure.Persistence
     {
         private IEFUnitOfWork _efUnitOfWork;
 
-        public EFRepository(IEFUnitOfWork efUnitOfWork)
-        {
-            if (efUnitOfWork == (IUnitOfWork)null) throw new ArgumentNullException("unitOfWork");
 
-            _efUnitOfWork = efUnitOfWork;
-        }
-
-        public IUnitOfWork UnitOfWork
-        {
-            get { return _efUnitOfWork; }
-        }
-
-        public TEntity Add(TEntity entity)
+        public TEntity Save(TEntity entity)
         {
             if (entity != (TEntity)null)
             {
