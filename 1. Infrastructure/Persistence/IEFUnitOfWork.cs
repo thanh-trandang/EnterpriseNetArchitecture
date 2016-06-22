@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LogiGear.Infrastructure.Persistence
 {
-    public interface IEFUnitOfWork : IUnitOfWork
+    public interface IEFUnitOfWork
     {
         DbSet<TEntity> CreateSet<TEntity>() where TEntity : class;
 

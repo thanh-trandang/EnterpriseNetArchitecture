@@ -55,8 +55,7 @@ namespace LogiGear.Infrastructure.Persistence
 
         public void Dispose()
         {
-            if (_efUnitOfWork != null)
-                _efUnitOfWork.Dispose();
+            throw new NotImplementedException();
         }
     }
 }

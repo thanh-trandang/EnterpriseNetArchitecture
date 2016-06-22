@@ -14,13 +14,6 @@ namespace LogiGear.Infrastructure.Persistence
     public class JobSeekerRepository : IJobSeekerRepository
     {
         private EFRepository<User> _userRepository;
-        public IUnitOfWork UnitOfWork
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public JobSeeker Save(JobSeeker jobSeeker)
         {
