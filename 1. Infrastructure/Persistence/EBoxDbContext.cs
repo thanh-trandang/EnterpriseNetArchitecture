@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogiGear.Infrastructure.Persistence.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,12 +11,13 @@ namespace LogiGear.Infrastructure.Persistence
     public class EBoxDbContext : DbContext
     {
         public EBoxDbContext()
-            : base("EFDbContext")
+            : base("EBoxDbContext")
         {
             this.Configuration.LazyLoadingEnabled = true;
             this.Configuration.ProxyCreationEnabled = true;
-            //TODO check this calling
-            // Database.SetInitializer(new MigrateDatabaseToLatestVersion<EBoxDbContext, Migrations.Configuration>("EFDbContext"));
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EBoxDbContext, Migrations.Configuration>("EBoxDbContext"));
         }
+
+        public DbSet<User> Users { get; set; }
     }
 }

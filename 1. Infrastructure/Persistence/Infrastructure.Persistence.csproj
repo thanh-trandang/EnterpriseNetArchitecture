@@ -51,9 +51,15 @@
   <ItemGroup>
     <Compile Include="EBoxDbContext.cs" />
     <Compile Include="EFRepository.cs" />
+    <Compile Include="EFUnitOfWork.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="IEFUnitOfWork.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="JobSeekerRepository.cs" />
+    <Compile Include="Migrations\201606221557568_add-user-table.cs" />
+    <Compile Include="Migrations\201606221557568_add-user-table.Designer.cs">
+      <DependentUpon>201606221557568_add-user-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +75,11 @@
       <Project>{fabd8083-1fd7-4ff4-b1b2-f675bba7a9a9}</Project>
       <Name>Domain.Repositories</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606221557568_add-user-table.resx">
+      <DependentUpon>201606221557568_add-user-table.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

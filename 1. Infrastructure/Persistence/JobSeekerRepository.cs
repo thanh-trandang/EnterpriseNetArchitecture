@@ -13,7 +13,13 @@ namespace LogiGear.Infrastructure.Persistence
 {
     public class JobSeekerRepository : IJobSeekerRepository
     {
-        private EFRepository<User> _userRepository;
+        private IUnitOfWork _unitOfWork;
+        private IRepository<User> _userRepository;
+        public JobSeekerRepository(IUnitOfWork unitOfWork)
+        {
+            this._unitOfWork = unitOfWork;
+            this._userRepository = this._unitOfWork.RepositoryOf<User>();
+        }
 
         public JobSeeker Save(JobSeeker jobSeeker)
         {
@@ -22,6 +28,8 @@ namespace LogiGear.Infrastructure.Persistence
             user.FirstName = jobSeeker.FirstName;
             user.MiddleName = jobSeeker.MiddleName;
             user.LastName = jobSeeker.LastName;
+            this._userRepository.Save(user);
+            this._unitOfWork.Commit();               
             return jobSeeker;
         }
 

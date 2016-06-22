@@ -40,7 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobSeekerRegistrationAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\5. Domain\Entities\Domain.Entities.csproj">
+      <Project>{10ba0b69-f5b9-4b4c-8550-759176159bc4}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\5. Domain\Repositories\Domain.Repositories.csproj">
+      <Project>{fabd8083-1fd7-4ff4-b1b2-f675bba7a9a9}</Project>
+      <Name>Domain.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Commands\Application.Commands.csproj">
+      <Project>{1421548a-5822-4d87-87db-a758ab3d2acf}</Project>
+      <Name>Application.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceContracts\Application.ServiceContracts.csproj">
+      <Project>{dbe16e0f-4ebb-4251-9b4a-98aa14fc85a4}</Project>
+      <Name>Application.ServiceContracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

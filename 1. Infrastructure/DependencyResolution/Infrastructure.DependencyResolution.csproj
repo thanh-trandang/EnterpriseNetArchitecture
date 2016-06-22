@@ -57,10 +57,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NinjectConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryModule.cs" />
+    <Compile Include="ServiceModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\4. Application\ServiceContracts\Application.ServiceContracts.csproj">
+      <Project>{dbe16e0f-4ebb-4251-9b4a-98aa14fc85a4}</Project>
+      <Name>Application.ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4. Application\Services\Application.Services.csproj">
+      <Project>{a8f2743b-08dd-4f9f-af9b-c21fd5671ee8}</Project>
+      <Name>Application.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\5. Domain\Repositories\Domain.Repositories.csproj">
+      <Project>{fabd8083-1fd7-4ff4-b1b2-f675bba7a9a9}</Project>
+      <Name>Domain.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\Infrastructure.Persistence.csproj">
+      <Project>{6ddf6dae-f717-4921-8804-01453dce185a}</Project>
+      <Name>Infrastructure.Persistence</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
