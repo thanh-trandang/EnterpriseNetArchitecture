@@ -17,14 +17,17 @@ namespace LogiGear.Application.ServiceContracts.Results
 
         public ApplicationStatus Status { get
             {
-                if(this.Error != null)
+                this._status = ApplicationStatus.SUCCESS;
+                if (this.Error != null)
                 {
-                    return ApplicationStatus.FAIL;
+                    this._status = ApplicationStatus.FAIL;
                 }
-
-                return ApplicationStatus.SUCCESS;
+               
+                return _status;
             }
         }
+
+        private ApplicationStatus _status;
 
         public Exception Error { get; set; }
     }
