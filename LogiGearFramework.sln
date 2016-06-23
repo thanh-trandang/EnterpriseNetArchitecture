@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Entities", "5. Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBox.MvcApp", "2. Presentation\EBox.MvcApp\EBox.MvcApp.csproj", "{74AD5BFC-1099-481A-A885-290A606CF704}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Services", "5. Domain\Services\Domain.Services.csproj", "{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{74AD5BFC-1099-481A-A885-290A606CF704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74AD5BFC-1099-481A-A885-290A606CF704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74AD5BFC-1099-481A-A885-290A606CF704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,5 +100,6 @@ Global
 		{A8F2743B-08DD-4F9F-AF9B-C21FD5671EE8} = {555D25B4-FDE5-4C4B-96EF-71054BA5BE7F}
 		{10BA0B69-F5B9-4B4C-8550-759176159BC4} = {D9C63D06-3CAC-43D2-85D2-6E08FC6D36DF}
 		{74AD5BFC-1099-481A-A885-290A606CF704} = {5189C97F-3D7D-447B-97D5-FE4A3FDC4984}
+		{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21} = {D9C63D06-3CAC-43D2-85D2-6E08FC6D36DF}
 	EndGlobalSection
 EndGlobal

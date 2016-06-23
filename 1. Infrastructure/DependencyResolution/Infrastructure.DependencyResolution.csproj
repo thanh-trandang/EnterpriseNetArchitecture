@@ -78,6 +78,10 @@
       <Project>{fabd8083-1fd7-4ff4-b1b2-f675bba7a9a9}</Project>
       <Name>Domain.Repositories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\5. Domain\Services\Domain.Services.csproj">
+      <Project>{1B7CCB98-8CBF-44AA-BF22-326D7FD1CF21}</Project>
+      <Name>Domain.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Persistence\Infrastructure.Persistence.csproj">
       <Project>{6ddf6dae-f717-4921-8804-01453dce185a}</Project>
       <Name>Infrastructure.Persistence</Name>

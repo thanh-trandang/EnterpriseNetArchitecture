@@ -10,6 +10,6 @@ namespace LogiGear.Domain.Repositories
 {
     public interface IJobSeekerRepository : IRepository<JobSeeker>
     {
-        JobSeeker FindOnlyOneJobSeeker(String email);
+        JobSeeker FindUniqueJobSeeker(String email);
     }
 }

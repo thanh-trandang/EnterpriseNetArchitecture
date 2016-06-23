@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employer.cs" />
+    <Compile Include="Exceptions\EmailCannotBeDuplicatedException.cs" />
     <Compile Include="JobSeeker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recruiter.cs" />

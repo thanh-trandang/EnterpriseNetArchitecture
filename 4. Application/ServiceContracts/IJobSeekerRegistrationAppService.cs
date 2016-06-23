@@ -1,4 +1,6 @@
 ﻿using LogiGear.Application.Commands;
+using LogiGear.Application.ServiceContracts.Results;
+using LogiGear.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,6 @@ namespace LogiGear.Application.ServiceContracts
 {
     public interface IJobSeekerRegistrationAppService
     {
-        void RegisterJobSeeker(RegisterJobSeekerCommand command);
+        JobSeekerRegistrationResult RegisterJobSeeker(RegisterJobSeekerCommand command);
     }
 }

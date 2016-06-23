@@ -33,10 +33,13 @@ namespace LogiGear.Infrastructure.Persistence
             return jobSeeker;
         }
 
-        public JobSeeker FindOnlyOneJobSeeker(string email)
+        public JobSeeker FindUniqueJobSeeker(string email)
         {
-
-            throw new NotImplementedException();
+            return this._userRepository.FindBy(u => u.Email.Equals(email))
+                .Select(u => new JobSeeker(u.Email, u.FirstName, u.LastName, u.IsActive) 
+                {
+                    MiddleName = u.MiddleName 
+                }).SingleOrDefault();
         }
 
         public JobSeeker Update(JobSeeker entity)

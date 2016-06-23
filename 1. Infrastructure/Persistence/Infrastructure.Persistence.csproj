@@ -52,6 +52,7 @@
     <Compile Include="EBoxDbContext.cs" />
     <Compile Include="EFRepository.cs" />
     <Compile Include="EFUnitOfWork.cs" />
+    <Compile Include="Entities\Resume.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="JobSeekerRepository.cs" />

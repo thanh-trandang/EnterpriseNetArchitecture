@@ -42,8 +42,14 @@
   <ItemGroup>
     <Compile Include="IJobSeekerRegistrationAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\ApplicationResult.cs" />
+    <Compile Include="Results\JobSeekerRegistrationResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\5. Domain\Entities\Domain.Entities.csproj">
+      <Project>{10BA0B69-F5B9-4B4C-8550-759176159BC4}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Commands\Application.Commands.csproj">
       <Project>{1421548a-5822-4d87-87db-a758ab3d2acf}</Project>
       <Name>Application.Commands</Name>
