@@ -22,14 +22,14 @@ namespace LogiGear.Application.ServiceContracts.Results
                 {
                     this._status = ApplicationStatus.FAIL;
                 }
-               
-                return _status;
+
+                return this._status;
             }
         }
 
-        private ApplicationStatus _status;
-
         public Exception Error { get; set; }
+
+        private ApplicationStatus _status;
     }
 
     public enum ApplicationStatus
